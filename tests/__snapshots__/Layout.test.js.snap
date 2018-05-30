@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Should renders without problems 1`] = `
+<DoubleInfo
+  heading="ФИО"
+  size="small"
+  theme={
+    Object {
+      "Heading": Object {
+        "color": "#ABADB6",
+        "fontSize": "14px",
+        "fontWeight": 200,
+        "large": Object {
+          "lineHeight": "14px",
+          "marginBottom": "8px",
+        },
+        "small": Object {
+          "lineHeight": "14px",
+          "marginBottom": "4px",
+        },
+      },
+      "TwoLineContent": Object {
+        "color": "#212C42",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": "24px",
+      },
+    }
+  }
+>
+  <TwoLineWrap>
+    <div
+      className="TwoLineWrap-jARGsr cnTMx"
+    >
+      <Heading
+        size="small"
+        theme={
+          Object {
+            "Heading": Object {
+              "color": "#ABADB6",
+              "fontSize": "14px",
+              "fontWeight": 200,
+              "large": Object {
+                "lineHeight": "14px",
+                "marginBottom": "8px",
+              },
+              "small": Object {
+                "lineHeight": "14px",
+                "marginBottom": "4px",
+              },
+            },
+            "TwoLineContent": Object {
+              "color": "#212C42",
+              "fontSize": "16px",
+              "fontWeight": 400,
+              "lineHeight": "24px",
+            },
+          }
+        }
+      >
+        <Heading__Elem
+          color="#ABADB6"
+          fontSize="14px"
+          fontWeight={200}
+          lineHeight="14px"
+          marginBottom="4px"
+          size="small"
+          theme={
+            Object {
+              "Heading": Object {
+                "color": "#ABADB6",
+                "fontSize": "14px",
+                "fontWeight": 200,
+                "large": Object {
+                  "lineHeight": "14px",
+                  "marginBottom": "8px",
+                },
+                "small": Object {
+                  "lineHeight": "14px",
+                  "marginBottom": "4px",
+                },
+              },
+              "TwoLineContent": Object {
+                "color": "#212C42",
+                "fontSize": "16px",
+                "fontWeight": 400,
+                "lineHeight": "24px",
+              },
+            }
+          }
+        >
+          <div
+            className="Heading__Elem-ciBIDr bWqwpJ"
+            color="#ABADB6"
+            fontSize="14px"
+            fontWeight={200}
+            size="small"
+          >
+            ФИО
+          </div>
+        </Heading__Elem>
+      </Heading>
+      <TwoLineContent
+        size="small"
+        theme={
+          Object {
+            "Heading": Object {
+              "color": "#ABADB6",
+              "fontSize": "14px",
+              "fontWeight": 200,
+              "large": Object {
+                "lineHeight": "14px",
+                "marginBottom": "8px",
+              },
+              "small": Object {
+                "lineHeight": "14px",
+                "marginBottom": "4px",
+              },
+            },
+            "TwoLineContent": Object {
+              "color": "#212C42",
+              "fontSize": "16px",
+              "fontWeight": 400,
+              "lineHeight": "24px",
+            },
+          }
+        }
+      >
+        <TwoLineContent__Elem
+          color="#212C42"
+          fontSize="16px"
+          fontWeight={400}
+          lineHeight="24px"
+          size="small"
+          theme={
+            Object {
+              "Heading": Object {
+                "color": "#ABADB6",
+                "fontSize": "14px",
+                "fontWeight": 200,
+                "large": Object {
+                  "lineHeight": "14px",
+                  "marginBottom": "8px",
+                },
+                "small": Object {
+                  "lineHeight": "14px",
+                  "marginBottom": "4px",
+                },
+              },
+              "TwoLineContent": Object {
+                "color": "#212C42",
+                "fontSize": "16px",
+                "fontWeight": 400,
+                "lineHeight": "24px",
+              },
+            }
+          }
+        >
+          <div
+            className="TwoLineContent__Elem-eTHQVk ezYkAF"
+            color="#212C42"
+            fontSize="16px"
+            fontWeight={400}
+            size="small"
+          >
+            Лорен Дитрих Арчибальдовна
+          </div>
+        </TwoLineContent__Elem>
+      </TwoLineContent>
+    </div>
+  </TwoLineWrap>
+</DoubleInfo>
+`;
