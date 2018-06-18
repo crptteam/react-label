@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { getThemeAsPlainTextByKeys } from "../utils";
 import defaultTheme from "../theme/defaultTheme";
-import { innerMerge } from "../../../react-input/src/utils";
+import { innerMerge } from "../utils";
 
 const Elem = styled.div`
   js-display: flex;
