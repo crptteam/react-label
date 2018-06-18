@@ -1,8 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { getThemeAsPlainTextByKeys } from '../utils';
-import defaultTheme from '../theme/defaultTheme';
+import { getThemeAsPlainTextByKeys } from "../utils";
+import defaultTheme from "../theme/defaultTheme";
+import { innerMerge } from "../../../react-input/src/utils";
 
 const Elem = styled.div`
   js-display: flex;
@@ -16,15 +17,23 @@ const Elem = styled.div`
 `;
 
 const TwoLineContent = props => {
-  const theme = getThemeAsPlainTextByKeys(props.theme || defaultTheme);
+  const merged = innerMerge(
+    {},
+    defaultTheme.Input,
+    props.theme && props.theme.Label ? props.theme.Label : {}
+  );
+
+  const theme = getThemeAsPlainTextByKeys(merged);
+
+  const mergedTwoLineContent = innerMerge(
+    {},
+    (defaultTheme.Label && defaultTheme.Label.TwoLineContent) || {},
+    (props.theme && props.theme.Label && props.theme.Label.TwoLineContent) || {}
+  );
 
   Object.assign(
     theme,
-    getThemeAsPlainTextByKeys(
-      (props.theme && props.theme.TwoLineContent) ||
-        defaultTheme.TwoLineContent,
-      props.size
-    )
+    getThemeAsPlainTextByKeys(mergedTwoLineContent, props.size)
   );
 
   return <Elem {...theme} {...props} />;

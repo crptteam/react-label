@@ -1,8 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { getThemeAsPlainTextByKeys } from '../utils';
-import defaultTheme from '../theme/defaultTheme';
+import { getThemeAsPlainTextByKeys } from "../utils";
+import defaultTheme from "../theme/defaultTheme";
+import { innerMerge } from "../../../react-input/src/utils";
 
 const Elem = styled.div`
   js-display: flex;
@@ -17,14 +18,23 @@ const Elem = styled.div`
 `;
 
 const Heading = props => {
-  const theme = getThemeAsPlainTextByKeys(props.theme || defaultTheme);
+  const merged = innerMerge(
+    {},
+    defaultTheme.Input,
+    props.theme && props.theme.Label ? props.theme.Label : {}
+  );
 
-  Object.assign(theme, getThemeAsPlainTextByKeys(
-    (props.theme && props.theme.Heading) || defaultTheme.Heading,
-    props.size
-  ));
+  const theme = getThemeAsPlainTextByKeys(merged);
 
-  return <Elem {...theme} {...props}  />;
+  const mergedHeading = innerMerge(
+    {},
+    (defaultTheme.Label && defaultTheme.Label.Heading) || {},
+    (props.theme && props.theme.Label && props.theme.Label.Heading) || {}
+  );
+
+  Object.assign(theme, getThemeAsPlainTextByKeys(mergedHeading, props.size));
+
+  return <Elem {...theme} {...props} />;
 };
 
 export default Heading;
