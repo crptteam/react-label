@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
+import { withTheme } from "styled-components";
+import PropTypes from "prop-types";
+import defaultTheme from "../theme/defaultTheme";
+import { SIZES } from "../constants";
 
-import PropTypes from 'prop-types';
-import defaultTheme from '../theme/defaultTheme';
-import { SIZES } from '../constants';
+const ComponentName = "DoubleInfo";
 
-const ComponentName = 'DoubleInfo';
-
-import TwoLineWrap from '../styled/TwoLineWrap';
-import Heading from '../styled/Heading';
-import TwoLineContent from '../styled/TwoLineContent';
+import TwoLineWrap from "../styled/TwoLineWrap";
+import Heading from "../styled/Heading";
+import TwoLineContent from "../styled/TwoLineContent";
 
 class TwoLineLabel extends React.Component {
   render() {
@@ -28,7 +28,7 @@ class TwoLineLabel extends React.Component {
 TwoLineLabel.propTypes = {
   theme: PropTypes.object,
   size: PropTypes.oneOf(Object.keys(SIZES)),
-  heading: PropTypes.any,
+  heading: PropTypes.any
 };
 
 TwoLineLabel.defaultProps = {
@@ -38,4 +38,4 @@ TwoLineLabel.defaultProps = {
 
 TwoLineLabel.displayName = ComponentName;
 
-export default TwoLineLabel;
+export default withTheme(TwoLineLabel);
