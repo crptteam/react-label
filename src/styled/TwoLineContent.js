@@ -19,7 +19,7 @@ const Elem = styled.div`
 const TwoLineContent = props => {
   const merged = innerMerge(
     {},
-    defaultTheme.Input,
+    defaultTheme.Label,
     props.theme && props.theme.Label ? props.theme.Label : {}
   );
 
