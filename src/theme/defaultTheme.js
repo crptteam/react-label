@@ -18,6 +18,9 @@ export default {
       color: "#212C42",
       fontSize: "16px",
       fontWeight: 400
+    },
+    TwoLineWrap: {
+      width: 'auto'
     }
   }
 };
