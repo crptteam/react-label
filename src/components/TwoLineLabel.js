@@ -13,7 +13,7 @@ import TwoLineContent from "../styled/TwoLineContent";
 class TwoLineLabel extends React.Component {
   render() {
     return (
-      <TwoLineWrap>
+      <TwoLineWrap theme={this.props.theme}>
         <Heading size={this.props.size} theme={this.props.theme}>
           {this.props.heading}
         </Heading>
